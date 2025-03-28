@@ -1,4 +1,7 @@
 <WindowLayout>
+    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+    size_hint: (0.9, 0.9)
+
     Label:
         bold: True
         font_name: "assets/fonts/raleway-v34-latin-700.ttf"
@@ -8,3 +11,17 @@
         size_hint: (1, None)
         text: "Conversor Binário"
         text_size: self.size
+    
+    GridLayout:
+        cols: 1
+        pos_hint: {"center_x": 0.5, "center_y": 0.4}
+        rows: 2
+        spacing: 10
+
+        Label:
+            font_size: 18
+            font_name: "assets/fonts/raleway-v34-latin-regular.ttf"
+            halign: "left"
+            size_hint: (1, None)
+            text: "Valor para Conversão:"
+            text_size: self.size

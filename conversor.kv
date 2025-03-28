@@ -25,3 +25,22 @@
             size_hint: (1, None)
             text: "Valor para Conversão:"
             text_size: self.size
+
+        TextInput:
+            background_color: (1, 1, 1, 0)
+            background_normal: ""
+            color: (1, 1, 1, 1)
+            font_size: 18
+            font_name: "assets/fonts/raleway-v34-latin-regular.ttf"
+            foreground_color: (1, 1, 1, 1)
+            hint_text: "Ex.: 1234"
+            height: 60
+            multiline: False
+            padding: (0, 20)
+            size_hint: (1, None)
+            canvas.before:
+                Color:
+                    rgba: 1, 1, 1, 1
+                Line:
+                    width: 1
+                    points: self.x, self.y, self.x + self.width, self.y

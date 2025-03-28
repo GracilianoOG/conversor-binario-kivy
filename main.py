@@ -1,13 +1,13 @@
 from kivy.app import App
-from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.floatlayout import FloatLayout
 from kivy.core.window import Window
 
 
-Window.size = (360, 580)
+Window.size = (340, 580)
 Window.clearcolor = (0.98, 0.52, 0, 1)
 
 
-class WindowLayout(BoxLayout):
+class WindowLayout(FloatLayout):
     pass
 
 

@@ -35,6 +35,7 @@
             foreground_color: (1, 1, 1, 1)
             hint_text: "Ex.: 1234"
             height: 60
+            id: input
             multiline: False
             padding: (0, 20)
             size_hint: (1, None)
@@ -49,6 +50,7 @@
         bold: True
         font_size: 18
         font_name: "assets/fonts/raleway-v34-latin-700.ttf"
+        id: output
         pos_hint: {"center_x": 0.5, "center_y": 0.3}
         size_hint: (1, None)
         text: "Efetue uma conversão"
@@ -61,6 +63,7 @@
         font_size: 18
         font_name: "assets/fonts/raleway-v34-latin-700.ttf"
         height: 60
+        on_release: root.on_convert_click()
         pos_hint: {"center_x": 0.5, "y": 0}
         size_hint: (1, None)
         text: "Converter"

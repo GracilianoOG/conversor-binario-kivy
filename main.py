@@ -22,6 +22,7 @@ class WindowLayout(FloatLayout):
             binary = str(decimal % 2) + binary
             decimal = decimal // 2
 
+        self.ids.input.text = ""
         self.ids.output.text = f"%08d" % int(binary)
 
 

@@ -16,7 +16,7 @@ class WindowLayout(FloatLayout):
         decimal = decimalStr
         binary = ""
 
-        if(decimal is not ""):
+        if(decimal != ""):
             decimal = int(decimal)
         else:
             self.ids.output.text = "Digite um valor para conversão!"

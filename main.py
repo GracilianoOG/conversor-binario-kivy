@@ -12,12 +12,13 @@ class WindowLayout(FloatLayout):
         self.ids.input.text = ""
     
     def on_convert_click(self):
-        decimalStr = self.ids.input.text
-        decimal = decimalStr
+        ogDecimal = self.ids.input.text
+        decimal = ogDecimal
         binary = ""
 
         if(decimal != ""):
             decimal = int(decimal)
+            ogDecimal = int(ogDecimal)
         else:
             self.ids.output.text = "Digite um valor para conversão!"
             return
@@ -33,7 +34,7 @@ class WindowLayout(FloatLayout):
             binary = str(decimal % 2) + binary
             decimal = decimal // 2
 
-        self.ids.output.text = f"Valor {decimalStr} em binário:\n{binary.zfill(8)}"
+        self.ids.output.text = f"Valor {ogDecimal} em binário:\n{binary.zfill(8)}"
         self.clear_output()
 
 

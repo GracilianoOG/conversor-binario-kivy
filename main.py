@@ -21,6 +21,9 @@ class WindowLayout(FloatLayout):
 
         if(decimal == 0):
             binary = "0"
+        elif(decimal < 0):
+            self.ids.output.text = "Apenas números positivos!"
+            return
 
         while decimal >= 1:
             binary = str(decimal % 2) + binary

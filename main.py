@@ -9,7 +9,8 @@ Window.clearcolor = (0.98, 0.52, 0, 1)
 
 class WindowLayout(FloatLayout):
     def on_convert_click(self):
-        decimal = self.ids.input.text
+        decimalStr = self.ids.input.text
+        decimal = decimalStr
         binary = ""
 
         if(decimal is not ""):
@@ -22,8 +23,8 @@ class WindowLayout(FloatLayout):
             binary = str(decimal % 2) + binary
             decimal = decimal // 2
 
+        self.ids.output.text = f"Valor {decimalStr} em binário:\n{int(binary): 08d}"
         self.ids.input.text = ""
-        self.ids.output.text = f"%08d" % int(binary)
 
 
 class ConversorApp(App):

@@ -26,7 +26,7 @@ class WindowLayout(FloatLayout):
             binary = str(decimal % 2) + binary
             decimal = decimal // 2
 
-        self.ids.output.text = f"Valor {decimalStr} em binário:\n{int(binary): 08d}"
+        self.ids.output.text = f"Valor {decimalStr} em binário:\n{binary.zfill(8)}"
         self.ids.input.text = ""
 
 

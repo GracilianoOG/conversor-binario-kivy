@@ -35,12 +35,13 @@
             foreground_color: (1, 1, 1, 1)
             input_filter: "int"
             hint_text: "Ex.: 1234"
+            hint_text_color: (1, 1, 1, 0.75)
             height: 60
             id: input
             multiline: False
             padding: (0, 20)
             size_hint: (1, None)
-            canvas.before:
+            canvas.after:
                 Color:
                     rgba: 1, 1, 1, 1
                 Line:

@@ -18,11 +18,12 @@ class WindowLayout(FloatLayout):
         decimalCalc = decimal
         binary = ""
 
-        if(decimalCalc != ""):
+        try:
             decimalCalc = int(decimalCalc)
             decimal = int(decimal)
-        else:
-            self.ids.output.text = "Digite um valor para conversão!"
+        except ValueError:
+            self.ids.output.text = "Digite um valor válido!"
+            self.clear_output()
             return
 
         if(decimalCalc == 0):

@@ -1,9 +1,12 @@
-from kivy.app import App
-from kivy.uix.floatlayout import FloatLayout
 from kivy.config import Config
 
 Config.set("graphics", "width", "340")
 Config.set("graphics", "height", "580")
+Config.set("graphics", "minimum_width", "320")
+Config.set("graphics", "minimum_height", "480")
+
+from kivy.app import App
+from kivy.uix.floatlayout import FloatLayout
 
 # Importing it before setting graphics don't change the screen size
 from kivy.core.window import Window
